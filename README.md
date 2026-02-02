@@ -1,24 +1,28 @@
-# README
+# SUPER Simple ToDo App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Simple Todo application built with Ruby on Rails.
 
-Things you may want to cover:
+## Requirements
 
-* Ruby version
+- **Ruby:** 3.0.2  
+- **Bundler:** latest
+- **Database:** SQLite3
 
-* System dependencies
+## Setup & Run
 
-* Configuration
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/KristianMakhul/todo_app.git
+   cd todo_app
 
-* Database creation
+2.  Install project dependencies:
+    `bundle install`
 
-* Database initialization
+3.  Create the database and run migrations:
+    `rails db:create db:migrate`
 
-* How to run the test suite
+4.  Start the Rails server:
+    `rails server`
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+5.  Open the application in your browser:
+    `http://localhost:3000`
