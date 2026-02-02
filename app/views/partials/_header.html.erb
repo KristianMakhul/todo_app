@@ -1,0 +1,26 @@
+<nav class="navbar">
+  <div class="navbar-container">
+    <% if account_signed_in? %>
+      <div class="navbar-content">
+        <ul class="navbar-links">
+          <li>
+            <%= link_to "My Todos", todo_items_path %>
+          </li>
+        </ul>
+
+        <%= button_to "Sign out",
+          destroy_account_session_path,
+          method: :delete,
+          class: "btn btn-outline" %>
+      </div>
+    <% else %>
+      <div class="navbar-content">
+        <div class="navbar-actions">
+          <%= link_to "Login", new_account_session_path, class: "btn btn-outline" %>
+          <%= link_to "Sign up", new_account_registration_path, class: "btn btn-danger" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</nav>
+

@@ -1,0 +1,12 @@
+<h1 class="todo-title">Todo Items</h1>
+
+<div id="todo_items">
+  <% @todo_items.each do |todo_item| %>
+    <div class="todo-card">
+      <p class="todo-card-title"><%= todo_item.title %></p>
+      <%= link_to "Open", todo_item, class: "todo-show-btn" %>
+    </div>
+  <% end %>
+</div>
+
+<%= link_to "New todo item", new_todo_item_path, class: "new-todo-btn" %>

@@ -1,0 +1,21 @@
+<div style="text-align: center; margin-top: 100px; font-family: Arial, sans-serif; color: #333;">
+  <% if notice %>
+    <p style="color: green; font-weight: bold; margin-bottom: 20px;"><%= notice %></p>
+  <% end %>
+
+  <div style="margin-bottom: 30px;">
+    <%= render @todo_item %>
+  </div>
+
+
+  <div style="display: flex; justify-content: center; gap: 15px; margin-top: 20px;">
+    <%= link_to "Edit this todo item", edit_todo_item_path(@todo_item), 
+          style: "margin-right: 15px; padding: 6px 12px; background-color: #3498db; color: white; text-decoration: none; border-radius: 5px;" %>
+
+    <%= link_to "Back to todo items", todo_items_path, 
+          style: "margin-right: 15px; padding: 6px 12px; background-color: #95a5a6; color: white; text-decoration: none; border-radius: 5px;" %>
+
+    <%= button_to "Delete this todo item", @todo_item, method: :delete, 
+          style: "padding: 6px 12px; font-size: 16px; background-color: #e74c3c; color: white; border: none; border-radius: 5px; cursor: pointer;" %>
+  </div>
+</div>

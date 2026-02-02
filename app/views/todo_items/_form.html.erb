@@ -1,0 +1,24 @@
+<%= form_with(model: todo_item) do |form| %>
+  <% if todo_item.errors.any? %>
+    <div style="color: red; border:1px solid #f44336; background-color:#fdecea; padding:10px; border-radius:5px; margin-bottom:20px;">
+      <h2 style="margin:0 0 10px 0; font-size:1.2rem;">
+        <%= pluralize(todo_item.errors.count, "error") %> prohibited this todo item from being saved:
+      </h2>
+
+      <ul style="margin:0; padding-left:20px;">
+        <% todo_item.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div style="margin-bottom:15px;">
+    <%= form.label :title, style: "display:block; font-weight:bold; margin-bottom:5px" %>
+    <%= form.text_field :title, style: "width:95%; padding:8px; border:1px solid #ccc; border-radius:4px" %>
+  </div>
+
+  <div style="text-align:left;">
+    <%= form.submit "Save", style:"padding:10px 20px; background-color:#4caf50; color:#fff; border:none; border-radius:5px; cursor:pointer;" %>
+  </div>
+<% end %>

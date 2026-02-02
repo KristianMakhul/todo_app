@@ -1,0 +1,103 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #121212;
+  border-bottom: 1px solid #222;
+  z-index: 1000;
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.75rem 1.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; 
+  gap: 1rem; 
+}
+
+
+.navbar-brand {
+  color: #ffffff;
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.navbar-brand:hover {
+  color: #38bdf8;
+}
+
+.navbar-content {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-links a {
+  color: #e5e7eb;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.navbar-links a:hover {
+  color: #38bdf8;
+}
+
+.btn {
+  padding: 0.45rem 0.9rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn-outline {
+  color: #38bdf8;
+  border: 1px solid #38bdf8;
+  background: transparent;
+}
+
+.btn-outline:hover {
+  background-color: #38bdf8;
+  color: #0f172a;
+}
+
+.btn-danger {
+  background-color: #ef4444;
+  color: #fff;
+  border: 1px solid #ef4444;
+}
+
+.btn-danger:hover {
+  background-color: #dc2626;
+}
+
+.navbar-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .navbar-content {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
